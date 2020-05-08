@@ -30,14 +30,39 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain how to build stateful class components.
 
+  -1 We create a class that extends “React.Component”: Example: Class App extends React.Component {}
+	-2 We create a constructor function
+	-3 Add  “super()”  so we can access and call functions on the object parent
+	-4 Create the state using the “this” keyword. Example: this.state = followers: []
+
 2. Describe the different phases of the component lifecycle.
+
+  Phase 1 / Mounting: It means putting elements into the DOM. This is where the constructor(), render(), and componentDidMount() will be called.
+
+	-Phase 2 / Updating: This is when the component is updated. A component is updated whenever there is a state or props change in the component. The render() is called here, we then the getSnapshotBeforeUpdate() method can be used to have access to the props and state before the update, React updates the DOM and lastly the componentDidUpdate() method runs
+
+	Phase 3 / Unmounting: This is the phase where a component is removed from the DOM. The componentWillUnmount() is the only method that runs in this final phase. This method is called when the component will be removed from the DOM.
 
 3. Demonstrate an understanding of class component lifecycle methods.
 
+  Answer:  React components all have their own phases. For example a class component the will render “Hello World”. Once “Hello World” is rendered on the screen, the component  that rendered “Hello World” had gone through 3 phases (or component lifecycle) called: Mounting, Updating and Unmounting. These phases are like a humans lifecycle: We are born, grow, and die. So Mounting = us being born, Updating = us growing, and Mounting = us dying.
+
+  Example:
+			-Mounting — It is at this phase the component is created (your code, and react’s internals) then inserted into the DOM
+			-Updating — A React component “grows”
+			-Unmounting — Final phase. Where a component is removed from the DOM
+
 4. Define stateful logic.
+  Answer: It is any code that uses state.
+
 
 5. Describe how to test a React component with React Testing Library.
 
+  Answer: we use the Arrange, Act, Assert framework. These ate steps we can use to build the tests.
+		-First, we “arrange” our test by setting up our code such that it can be tested
+		-Then, we “act” - calling a method or function that returns a result of interest to our test.
+		-Finally, with that return we “assert” if our expected return matched the actual return.
+    
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
 ## Instructions
